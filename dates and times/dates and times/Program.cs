@@ -33,7 +33,10 @@ namespace dates_and_times
             //using parse also declares the date time like the above 
             //if you want to do math between two dates you can use timespan. in this you can subtract unlike above. 
             DateTime myBirthday = DateTime.Parse("09/21/1990");
-            TimeSpan myAge = DateTime.Now.Subtract(myBirthday);
+            TimeSpan myAge = DateTime.Now.Subtract(myBirthday); //this subtracts my birthday from the NOW time
+            //if you want to subtract another date you would do:
+            //DateTime someOtherDate = new DateTime(1980, 1, 1);
+            //TimeSpan myAge = someOtherDate.Subtract(myBirthday); this will give me a negative number because my birthday is later. it just gives the days between
             Console.WriteLine(myAge.TotalDays);
             Console.ReadLine();
         }
